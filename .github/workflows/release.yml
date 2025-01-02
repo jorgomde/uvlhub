@@ -22,8 +22,7 @@ jobs:
       with:
         tag_name: "v${{ github.run_number }}"
         release_name: "Release v${{ github.run_number }}"
-        body: |
-          ### Cambios en esta versión:
-          - Aquí puedes listar los cambios automáticamente
+        body: "${{ env.changelog }}"
+          
         draft: false
         prerelease: false
